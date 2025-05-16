@@ -119,12 +119,11 @@ body {
   display: inline-block;
 }
 
-/* Job Cards */
 .job {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 20px;
   border-radius: 12px;
-  background-color: #f7f2fb;
+  background-color: #f9f5fc; /* Matching .project box */
   box-shadow: 0 4px 12px rgba(100, 0, 150, 0.05);
 }
 
@@ -135,16 +134,17 @@ body {
 
 .job p {
   font-style: italic;
-  color: #555;
+  color: #666;
+  margin-bottom: 10px;
 }
 
 .job ul {
-  margin-top: 10px;
   padding-left: 20px;
+  margin-top: 10px;
 }
 
 .job li {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 /* Hobbies section */
