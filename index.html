@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Polyna German</title>
   <link rel="stylesheet" href="style.css"/>
@@ -29,7 +29,7 @@
         <p>I’m Polyna, a Computer Science and Economics student at the University of Toronto (Class of 2027). I’m passionate about backend development, data analysis, and research that intersects technology with real-world impact.</p>
       </section>
 
-      <!-- Experience -->
+      <!-- Work Experience -->
       <section>
         <h2>Work Experience</h2>
 
@@ -57,55 +57,37 @@
         <div class="project">
           <h3>Boom vs Bust: Economic Cycles & Patent Litigation</h3>
           <p>Analyzed court case durations and economic indicators using Pandas, scikit-learn, and data scraping APIs. Explored patterns in how litigation varies with the economy.</p>
-          <button class="pdf-btn" data-pdf="Final_project_eco225.pdf">Research Paper</button>
+          <a href="Final_project_eco225.pdf" target="_blank" class="button">View Research Paper</a>
         </div>
 
         <div class="project">
           <h3>Conflict Escalation Prediction (Machine Learning)</h3>
-          <p>Used XGBoost, Transformers, and FeedForward Neural Networks to predict conflict escalation and compared performance of models.</p>
-          <button class="pdf-btn" data-pdf="Neural_Network_Presentation.pdf">Neural Network Presentation</button>
+          <p>Used XGBoost, Transformers, and FeedForward Neural Networks to predict conflict escalation likelihood and compared model performance.</p>
+          <a href="Neural_Network_Presentation.pdf" target="_blank" class="button">View Neural Network Slides</a>
         </div>
 
         <div class="project">
           <h3>Spydle Multiplayer Word Game</h3>
-          <p>.</p>
+          <p>Developed a real-time word game where players race to guess words. Built the backend with Spring Boot and WebSockets, frontend with Java Swing and React for a dynamic UI.</p>
+          <a href="https://github.com/FiveTotallySpies/Spydle" target="_blank" class="button">View on GitHub</a>
         </div>
       </section>
 
-  <!-- PDF Modal -->
-  <div id="pdf-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <iframe src="" id="pdf-frame" class="pdf-viewer"></iframe>
-    </div>
+      <!-- Hobbies -->
+      <section>
+        <h2>Hobbies</h2>
+        <div class="hobbies">
+          <div class="hobby">
+            <img src="images/hobby1.jpg" alt="Hobby photo" class="hobby-photo"/>
+            <p>I love photography – especially capturing nature and cityscapes.</p>
+          </div>
+          <div class="hobby">
+            <img src="images/hobby2.jpg" alt="Hobby photo" class="hobby-photo"/>
+            <p>I enjoy hiking and exploring trails across Canada during the summer.</p>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
-
-  <!-- JS for Modal -->
-  <script>
-    const modal = document.getElementById("pdf-modal");
-    const frame = document.getElementById("pdf-frame");
-    const buttons = document.querySelectorAll(".pdf-btn");
-    const closeBtn = document.querySelector(".close");
-
-    buttons.forEach(button => {
-      button.addEventListener("click", () => {
-        const pdfPath = button.getAttribute("data-pdf");
-        frame.src = pdfPath;
-        modal.style.display = "block";
-      });
-    });
-
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-      frame.src = "";
-    });
-
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-        frame.src = "";
-      }
-    });
-  </script>
 </body>
 </html>
