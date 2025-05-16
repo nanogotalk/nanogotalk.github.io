@@ -14,7 +14,7 @@ body {
 }
 
 .sidebar {
-  width: 25%;
+  width: 20%;  /* Reduced sidebar width */
   padding-right: 2rem;
   border-right: 1px solid #ddd;
 }
@@ -53,7 +53,7 @@ body {
 }
 
 .content {
-  width: 75%;
+  width: 80%;  /* Increased main content width */
 }
 
 .content h2 {
@@ -78,15 +78,15 @@ body {
 }
 
 .project {
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;  /* More space between projects */
+  margin-bottom: 3rem;
 }
 
 .pdf-viewer {
   width: 100%;
-  height: 500px;
+  height: 700px;    /* Increased height */
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-top: 0.5rem;
+  margin-top: 0.7rem;
   margin-bottom: 1rem;
 }
