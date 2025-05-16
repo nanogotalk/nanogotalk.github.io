@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Polyna German</title>
-  <link href="style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="container">
-    <header>
+    <aside class="sidebar">
       <h1>Polyna German</h1>
-      <p>Computer Science & Economics Student • University of Toronto</p>
-      <p><a href="mailto:polynagerman@gmail.com">polynagerman@gmail.com</a> • Toronto, ON • <a href="#">LinkedIn</a></p>
-    </header>
+      <p>Computer Science & Economics<br>University of Toronto</p>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>University of Toronto</strong> — Honors Bachelor of CS & Economics, Minor in Statistics<br/>
-      <em>Class of 2027</em></p>
-      <p><strong>Relevant Coursework:</strong> OOP, Data Science, Big Data Tools, Micro/Macro Economics, Statistics, Theory of Computation, Logic</p>
-    </section>
+      <div class="buttons">
+        <a href="mailto:polynagerman@gmail.com" class="button">Email Me</a>
+        <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" class="button">LinkedIn</a>
+        <a href="resume.pdf" download class="button">Download Resume</a>
+      </div>
+    </aside>
 
-    <section>
-      <h2>Experience</h2>
-      <h3>Software Engineer, Gexateq</h3>
-      <p><em>July 2024 – September 2024, Minsk, Belarus</em></p>
-      <ul>
-        <li>Built backend of banking app with FastAPI, PostgreSQL, and Docker.</li>
-        <li>Used Alembic for migrations, Celery for task scheduling, pytest for unit testing.</li>
-      </ul>
+    <main class="content">
+      <section>
+        <h2>About Me</h2>
+        <p>I’m Polyna, a Computer Science & Economics student at the University of Toronto (Class of 2027). I'm passionate about backend development, data science, and economic research. I enjoy building smart solutions and exploring the intersection of tech and society.</p>
+      </section>
 
-      <h3>Research Assistant, Canadian Economics Association</h3>
-      <p><em>April 2025 – Present, Toronto</em></p>
-      <ul>
-        <li>Collected & analyzed university data to infer demographics using AI and data tools.</li>
-        <li>Created visuals and reports for academic publication.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Projects</h2>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Boom vs Bust:</strong> Analyzed patent litigation with ML models (Random Forest, Regression Tree) and economic indicators using Python.</li>
-        <li><strong>Spydle Game:</strong> Built frontend in Swing and helped move to React. Backend via Spring Boot.</li>
-        <li><strong>Conflict Prediction:</strong> Used XGBoost, Transformer, and Neural Nets to model conflict escalation patterns.</li>
-      </ul>
-    </section>
+        <div class="project">
+          <img src="images/project1.png" alt="Project screenshot">
+          <div>
+            <h3>Boom vs Bust</h3>
+            <p>Machine learning analysis of patent litigation trends during economic cycles. Used Python, scikit-learn, Pandas, Seaborn.</p>
+          </div>
+        </div>
 
-    <section>
-      <h2>Skills</h2>
-      <p><strong>Languages:</strong> Python, Java, HTML, CSS, R, SQL</p>
-      <p><strong>Tools:</strong> FastAPI, SQLAlchemy, Docker, Spring, React, PostgreSQL, Pandas, Matplotlib, Seaborn, Git, Celery, Power BI, Poetry</p>
-      <p><strong>Languages Spoken:</strong> English, Belarusian, Russian, Polish</p>
-    </section>
+        <!-- Add more projects here -->
+      </section>
 
-    <footer>
-      <p>&copy; 2025 Polyna German</p>
-    </footer>
+      <section>
+        <h2>Experience</h2>
+
+        <h3>Gexateq — Software Engineer</h3>
+        <p><em>Jul 2024 – Sept 2024 • Minsk, Belarus</em></p>
+        <ul>
+          <li>Built backend of banking app using FastAPI, Docker, PostgreSQL, Celery, Alembic.</li>
+        </ul>
+
+        <h3>Research Assistant — Canadian Economics Association</h3>
+        <p><em>Apr 2025 – Present • Toronto, Canada</em></p>
+        <ul>
+          <li>Analyzed academic data using AI to extract and visualize trends in demographics.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Hobbies</h2>
+        <div class="hobby-gallery">
+          <img src="images/hobby1.jpg" alt="Hobby photo">
+          <img src="images/hobby2.jpg" alt="Hobby photo">
+        </div>
+        <p>I enjoy painting, hiking, and exploring modern art. I love combining logic and creativity in both work and life!</p>
+      </section>
+    </main>
   </div>
 </body>
 </html>
