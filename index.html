@@ -50,23 +50,65 @@
       <section>
         <h2>Projects</h2>
 
-        <!-- Boom vs Bust PDFs -->
         <div class="project">
           <h3>Boom vs Bust: Economic Cycles & Patent Litigation</h3>
           <p>Analyzed court case durations and economic indicators using Pandas, scikit-learn, and data scraping APIs. Explored patterns in how litigation varies with the economy.</p>
-          <p><strong.>Research Paper</strong.>:</strong></p>
-          <iframe src="Final_project_eco225 (5).pdf" class="pdf-viewer"></iframe>
-         </div>
+          <button class="pdf-btn" data-pdf="Final_project_eco225 (5).pdf">Research Paper</button>
+        </div>
 
-        <!-- Conflict Escalation PDF -->
         <div class="project">
           <h3>Conflict Escalation Prediction (Machine Learning)</h3>
           <p>Used XGBoost, Transformers, and FeedForward Neural Networks to predict conflict escalation likelihoods and compared model performance.</p>
-          <iframe src="pdf24_images_merged-2 (1).pdf" class="pdf-viewer"></iframe>
+          <button class="pdf-btn" data-pdf="pdf24_images_merged-2 (1).pdf">Neural Network Presentation</button>
+        </div>
 
+        <div class="project">
+          <h3>Spydle Multiplayer Word Game</h3>
+          <p>Developed the frontend using Swing, transitioned to React for better UI/UX, and integrated backend with Spring Boot for real-time gameplay.</p>
+          <!-- If you have a live demo or GitHub repo, add links here -->
+          <a href="https://github.com/yourusername/spydle" target="_blank" class="button">GitHub Repo</a>
+          <!-- Optional: Add PDF or presentation popup if you have docs -->
         </div>
       </section>
     </main>
   </div>
+
+  <!-- Modal -->
+  <div id="pdf-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <iframe src="" id="pdf-frame" class="pdf-viewer"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('pdf-modal');
+    const pdfFrame = document.getElementById('pdf-frame');
+    const closeBtn = document.querySelector('.close');
+    const pdfButtons = document.querySelectorAll('.pdf-btn');
+
+    pdfButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const pdfSrc = button.getAttribute('data-pdf');
+        pdfFrame.src = pdfSrc;
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // prevent background scroll
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      pdfFrame.src = ''; // stop loading PDF
+      document.body.style.overflow = 'auto'; // restore scroll
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        pdfFrame.src = '';
+        document.body.style.overflow = 'auto';
+      }
+    });
+  </script>
 </body>
 </html>
