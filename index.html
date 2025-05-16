@@ -1,37 +1,7 @@
-<script>
-  const modal = document.getElementById('pdf-modal');
-  const pdfFrame = document.getElementById('pdf-frame');
-  const closeBtn = document.querySelector('.close');
-  const pdfButtons = document.querySelectorAll('.pdf-btn');
-
-  pdfButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const pdfSrc = button.getAttribute('data-pdf');
-      pdfFrame.src = pdfSrc;
-      modal.style.display = 'block';
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    });
-  });
-
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    pdfFrame.src = '';
-    document.body.style.overflow = 'auto';
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      modal.style.display = 'none';
-      pdfFrame.src = '';
-      document.body.style.overflow = 'auto';
-    }
-  });
-</script>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Polyna German</title>
   <link rel="stylesheet" href="style.css"/>
@@ -47,7 +17,7 @@
       <div class="buttons">
         <a href="mailto:polynagerman@gmail.com" class="button">Email</a>
         <a href="https://linkedin.com/in/polynagerman" target="_blank" class="button">LinkedIn</a>
-        <a href="Polyna_German_resume (19).pdf" download class="button">Resume</a>
+        <a href="Polyna_German_resume.pdf" download class="button">Resume</a>
       </div>
     </aside>
 
@@ -66,13 +36,17 @@
         <h3>Research Assistant – Canadian Economics Association</h3>
         <p><em>Apr 2025 – Present • Toronto, Canada</em></p>
         <ul>
-          <li>Used ChatGPT and statistical tools to analyze academic trends.</li>
+          <li>Collected and analyzed data from Canadian university economics departments.</li>
+          <li>Used ChatGPT and statistical tools to infer demographic data.</li>
+          <li>Created visual reports and assisted in academic presentations.</li>
         </ul>
 
         <h3>Software Engineer – Gexateq</h3>
         <p><em>Jul 2024 – Sept 2024 • Minsk, Belarus</em></p>
         <ul>
-          <li>Built backend of banking app using FastAPI, Docker, PostgreSQL, Celery.</li>
+          <li>Developed backend services using FastAPI, SQLAlchemy, PostgreSQL.</li>
+          <li>Containerized applications using Docker and orchestrated services with Docker Compose.</li>
+          <li>Handled task scheduling with Celery and database migrations with Alembic.</li>
         </ul>
       </section>
 
@@ -83,27 +57,39 @@
         <div class="project">
           <h3>Boom vs Bust: Economic Cycles & Patent Litigation</h3>
           <p>Analyzed court case durations and economic indicators using Pandas, scikit-learn, and data scraping APIs. Explored patterns in how litigation varies with the economy.</p>
-          <button class="pdf-btn" data-pdf="Final_project_eco225 (5).pdf">Research Paper</button>
+          <button class="pdf-btn" data-pdf="Final_project_eco225.pdf">Research Paper</button>
         </div>
 
         <div class="project">
           <h3>Conflict Escalation Prediction (Machine Learning)</h3>
-          <p>Used XGBoost, Transformers, and FeedForward Neural Networks to predict conflict escalation likelihoods and compared model performance.</p>
-          <button class="pdf-btn" data-pdf="pdf24_images_merged-2 (1).pdf">Neural Network Presentation</button>
+          <p>Used XGBoost, Transformers, and FeedForward Neural Networks to predict conflict escalation and compared performance of models.</p>
+          <button class="pdf-btn" data-pdf="Neural_Network_Presentation.pdf">Neural Network Presentation</button>
         </div>
 
         <div class="project">
           <h3>Spydle Multiplayer Word Game</h3>
-          <p>Developed the frontend using Swing, transitioned to React for better UI/UX, and integrated backend with Spring Boot for real-time gameplay.</p>
-          <!-- If you have a live demo or GitHub repo, add links here -->
-          <a href="https://github.com/FiveTotallySpies/Spydle" target="_blank" class="button">GitHub Repo</a>
-          <!-- Optional: Add PDF or presentation popup if you have docs -->
+          <p>Developed the frontend using Java Swing, later transitioned to React. Built real-time game logic using Spring Boot backend.</p>
+        </div>
+      </section>
+
+      <!-- Hobbies -->
+      <section>
+        <h2>Hobbies</h2>
+        <div class="hobbies">
+          <div class="hobby">
+            <img src="images/hobby1.jpg" alt="Hobby photo" class="hobby-photo"/>
+            <p>I love photography – especially capturing nature and cityscapes.</p>
+          </div>
+          <div class="hobby">
+            <img src="images/hobby2.jpg" alt="Hobby photo" class="hobby-photo"/>
+            <p>I enjoy hiking and exploring trails across Canada during the summer.</p>
+          </div>
         </div>
       </section>
     </main>
   </div>
 
-  <!-- Modal -->
+  <!-- PDF Modal -->
   <div id="pdf-modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -111,32 +97,30 @@
     </div>
   </div>
 
+  <!-- JS for Modal -->
   <script>
-    const modal = document.getElementById('pdf-modal');
-    const pdfFrame = document.getElementById('pdf-frame');
-    const closeBtn = document.querySelector('.close');
-    const pdfButtons = document.querySelectorAll('.pdf-btn');
+    const modal = document.getElementById("pdf-modal");
+    const frame = document.getElementById("pdf-frame");
+    const buttons = document.querySelectorAll(".pdf-btn");
+    const closeBtn = document.querySelector(".close");
 
-    pdfButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const pdfSrc = button.getAttribute('data-pdf');
-        pdfFrame.src = pdfSrc;
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // prevent background scroll
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const pdfPath = button.getAttribute("data-pdf");
+        frame.src = pdfPath;
+        modal.style.display = "block";
       });
     });
 
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-      pdfFrame.src = ''; // stop loading PDF
-      document.body.style.overflow = 'auto'; // restore scroll
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+      frame.src = "";
     });
 
-    window.addEventListener('click', (e) => {
+    window.addEventListener("click", (e) => {
       if (e.target === modal) {
-        modal.style.display = 'none';
-        pdfFrame.src = '';
-        document.body.style.overflow = 'auto';
+        modal.style.display = "none";
+        frame.src = "";
       }
     });
   </script>
