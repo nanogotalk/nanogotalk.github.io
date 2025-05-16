@@ -1,88 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Polyna German</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-  <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <img src="images/profile.jpg" alt="Profile photo" class="profile-photo"/>
-      <h1>Polyna German</h1>
-      <p>CS & Econ Student<br>University of Toronto</p>
+<main class="content">
 
-      <div class="buttons">
-        <a href="mailto:polynagerman@gmail.com" class="button">Email</a>
-        <a href="https://linkedin.com/in/polynagerman" target="_blank" class="button">LinkedIn</a>
-        <a href="Polyna_German_resume (19).pdf" download class="button">Resume</a>
-      </div>
-    </aside>
+  <!-- Bio -->
+  <section class="project">
+    <h2>About Me</h2>
+    <p>
+      I’m Polyna, a Computer Science and Economics student at the University of Toronto (Class of 2027).
+      I’m passionate about backend development, data analysis, and research that intersects technology with real-world impact.
+    </p>
+  </section>
 
-    <!-- Main Content -->
-    <main class="content">
-      <!-- Bio -->
-      <section>
-        <h2>About Me</h2>
-        <p>I’m Polyna, a Computer Science and Economics student at the University of Toronto (Class of 2027). I’m passionate about data analysis, and research that actually can help people.</p>
-      </section>
+  <!-- Work Experience -->
+  <section class="project">
+    <h2>Work Experience</h2>
 
-      <!-- Work Experience -->
-      <section>
-        <h2>Work Experience</h2>
+    <div class="job">
+      <h3>Research Assistant – Canadian Economics Association</h3>
+      <p><em>Apr 2025 – Present • Toronto, Canada</em></p>
+      <ul>
+        <li>Collected and analyzed academic data using Python and statistical methods.</li>
+        <li>Inferred demographics using ChatGPT and name-based algorithms.</li>
+        <li>Created visualizations and reports for academic publication.</li>
+      </ul>
+    </div>
 
-        <h3>Research Assistant – Canadian Economics Association</h3>
-        <p><em>Apr 2025 – Present • Toronto, Canada</em></p>
-        <ul>
-          <li>Collected and analyzed data from Canadian university economics departments.</li>
-          <li>Used ChatGPT and statistical tools to infer demographic data.</li>
-          <li>Created visual reports and assisted in academic presentations.</li>
-        </ul>
+    <div class="job">
+      <h3>Software Engineer – Gexateq</h3>
+      <p><em>Jul 2024 – Sept 2024 • Minsk, Belarus</em></p>
+      <ul>
+        <li>Developed a backend for a banking app with FastAPI, PostgreSQL, Docker, and Celery.</li>
+        <li>Wrote unit tests using Pytest and managed services with Docker Compose.</li>
+        <li>Used Git, Alembic, and DBeaver for version control and database migrations.</li>
+      </ul>
+    </div>
+  </section>
 
-        <h3>Software Engineer – Gexateq</h3>
-        <p><em>Jul 2024 – Sept 2024 • Minsk, Belarus</em></p>
-        <ul>
-          <li>Developed backend services using FastAPI, SQLAlchemy, PostgreSQL.</li>
-          <li>Containerized applications using Docker and orchestrated services with Docker Compose.</li>
-          <li>Handled task scheduling with Celery and database migrations with Alembic.</li>
-        </ul>
-      </section>
+  <!-- Projects -->
+  <section>
+    <h2>Projects</h2>
 
-      <!-- Projects -->
-      <section>
-        <h2>Projects</h2>
+    <div class="project">
+      <h3>Boom vs Bust: Economic Cycles & Patent Litigation</h3>
+      <p>Analyzed court case durations and economic indicators using Pandas, scikit-learn, and data scraping APIs.</p>
+      <a href="Final_project_eco225.pdf" target="_blank" class="button">View Research Paper</a>
+    </div>
 
-        <div class="project">
-          <h3>Boom vs Bust: Economic Cycles & Patent Litigation</h3>
-          <p>Analyzed court case durations and economic indicators using Pandas, scikit-learn, and data scraping APIs. Explored patterns in how litigation varies with the economy.</p>
-          <a href="Final_project_eco225 (5).pdf" target="_blank" class="button">View Research Paper</a>
-        </div>
+    <div class="project">
+      <h3>Conflict Escalation Prediction (Machine Learning)</h3>
+      <p>Used XGBoost, Transformers, and FeedForward Neural Networks to predict and analyze conflict escalation.</p>
+      <a href="Neural_Network_Presentation.pdf" target="_blank" class="button">View Presentation</a>
+    </div>
 
-        <div class="project">
-          <h3>Conflict Escalation Prediction (Machine Learning)</h3>
-          <p>Used XGBoost, Transformers, and FeedForward Neural Networks to predict conflict escalation likelihood and compared model performance.</p>
-          <a href="pdf24_images_merged-2 (1).pdf" target="_blank" class="button">View Neural Network Slides</a>
-        </div>
+    <div class="project">
+      <h3>Spydle – Multiplayer Word Game</h3>
+      <p>Developed a real-time multiplayer word game. Built the frontend with Java Swing and later transitioned to React for better UI/UX. Integrated backend using Spring Boot for real-time functionality.</p>
+      <a href="https://github.com/yourusername/spydle" target="_blank" class="button">View on GitHub</a>
+    </div>
+  </section>
 
-        <div class="project">
-          <h3>Spydle Multiplayer Word Game</h3>
-          <p>Developed a real-time word game where players race to guess words. Built the backend with Spring Boot and WebSockets, frontend with Java Swing and React for a dynamic UI.</p>
-          <a href="https://github.com/FiveTotallySpies/Spydle" target="_blank" class="button">View on GitHub</a>
-        </div>
-      </section>
-
-      <!-- Hobbies -->
-      <section>
-        <h2>Hobbies</h2>
-        <div class="hobbies">
-          <div class="hobby">
-            <p>In my meantime I like overthinking, reading, and baking.</p>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-</body>
-</html>
+</main>
