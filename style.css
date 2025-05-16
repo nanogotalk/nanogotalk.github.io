@@ -14,7 +14,7 @@ body {
 }
 
 .sidebar {
-  width: 20%;  /* Reduced sidebar width */
+  width: 20%;
   padding-right: 2rem;
   border-right: 1px solid #ddd;
 }
@@ -22,6 +22,7 @@ body {
 .sidebar h1 {
   font-size: 2rem;
   margin-bottom: 0.3rem;
+  color: #5a2a82; /* Deep purple */
 }
 
 .sidebar .buttons {
@@ -34,12 +35,17 @@ body {
 .button {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #007acc;
+  background-color: #7b42f6; /* Bright purple */
   color: #fff;
   text-decoration: none;
   text-align: center;
   border-radius: 4px;
   font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #5a2a82; /* Darker purple on hover */
 }
 
 .profile-photo {
@@ -49,22 +55,24 @@ body {
   object-fit: cover;
   display: block;
   margin: 0 auto 1rem auto;
-  border: 2px solid #ccc;
+  border: 2px solid #7b42f6; /* Purple border */
 }
 
 .content {
-  width: 80%;  /* Increased main content width */
+  width: 80%;
 }
 
 .content h2 {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #7b42f6; /* Purple underline */
   margin-top: 2rem;
   font-size: 1.4rem;
+  color: #5a2a82; /* Deep purple */
 }
 
 .content h3 {
   margin-bottom: 0.2rem;
   font-size: 1.15rem;
+  color: #7b42f6; /* Bright purple */
 }
 
 .content ul {
@@ -75,17 +83,18 @@ body {
 .content ul {
   font-size: 0.95rem;
   line-height: 1.5;
+  color: #333;
 }
 
 .project {
-  margin-top: 2rem;  /* More space between projects */
+  margin-top: 2rem;
   margin-bottom: 3rem;
 }
 
 .pdf-viewer {
   width: 100%;
-  height: 700px;    /* Increased height */
-  border: 1px solid #ccc;
+  height: 700px;
+  border: 1px solid #7b42f6; /* Purple border */
   border-radius: 4px;
   margin-top: 0.7rem;
   margin-bottom: 1rem;
