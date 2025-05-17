@@ -169,6 +169,25 @@ body {
   display: inline-block;
 }
 
+.card-box p em {
+  font-style: italic;
+  color: #666;
+  font-weight: 500;
+}
+
+.card-box p em span {
+  display: inline-block;
+}
+
+.card-box p em .date {
+  margin-right: 8px;
+}
+
+.card-box p em .location {
+  margin-left: 8px;
+}
+
+
 
 /* Responsive Layout */
 @media (max-width: 768px) {
