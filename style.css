@@ -147,6 +147,20 @@ body {
   margin-bottom: 8px;
 } */
 
+.job-info {
+  display: inline-flex;
+  gap: 10px;
+  font-style: italic;
+  color: #666;
+  font-weight: 500;
+}
+
+.job-info span:not(:last-child)::after {
+  content: "•";
+  margin-left: 10px;
+  color: #999;
+}
+
 .card-box {
   margin-bottom: 40px;
   padding: 20px;
