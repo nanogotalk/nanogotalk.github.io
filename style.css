@@ -273,3 +273,17 @@ h3 a:hover { color: var(--violet); }
   .skills { grid-template-columns: 1fr; row-gap: 2px; }
   .skills dd { margin-bottom: 12px; }
 }
+
+/* Leadership: short "why" line under a role title */
+.what .why {
+  color: var(--muted);
+  font-style: italic;
+  max-width: 62ch;
+  margin-bottom: 8px;
+}
+
+.what .org-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: -4px 0 8px;
+}
