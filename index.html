@@ -1,111 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Polyna German</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="Polyna German — Computer Science and Economics student at the University of Toronto, working on data-driven economic research.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="layout">
+
     <!-- Sidebar -->
     <aside class="sidebar">
-      <img src="images/profile.jpg" alt="Profile photo" class="profile-photo"/>
-      <h1>Polyna German</h1>
-      <p>CS & Econ Student with minor in Statistics<br>University of Toronto</p>
+      <img src="images/profile.jpg" alt="Polyna German" class="photo">
+      <h1 class="name">Polyna German</h1>
+      <p class="tagline">Computer Science &amp; Economics, minor in Statistics<br>University of Toronto, 2027</p>
 
-      <div class="buttons">
-        <a href="mailto:polynagerman@gmail.com" class="button">Email</a>
-        <a href="https://linkedin.com/in/polynagerman" target="_blank" class="button">LinkedIn</a>
-        <a href="Polyna_German_resume.pdf" target="_blank" class="button">Resume</a>
-      </div>
+      <nav class="links" aria-label="Contact">
+        <a href="mailto:polynagerman@gmail.com" class="link-primary">Email me</a>
+        <a href="https://www.linkedin.com/in/polynagerman" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="Polyna_German_resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </nav>
+
+      <nav class="jump" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#skills">Skills</a>
+      </nav>
     </aside>
 
-    <!-- Main Content -->
+    <!-- Main -->
     <main class="content">
-        <h2>About Me</h2>
-      <section>
-      <!-- About Me -->
-    <div class="card-box">
+
+      <section id="about" class="intro">
+        <p class="lede">I turn messy data into research that helps people.</p>
         <p>
-          I’m Polyna, a Computer Science and Economics student at the University of Toronto (Class of 2027).
-          I’m passionate about data analysis, and research that actually helps people.
+          I’m a Computer Science and Economics student at the University of Toronto, graduating in May 2027.
+          As a research assistant, I’ve studied how physicians find locum work, how Canadians split savings
+          between TFSAs and RRSPs, and who teaches economics at Canadian universities. Most of that work
+          means scraping, cleaning and analyzing data in Python and R, then explaining what it shows.
         </p>
-    </div>
-</section>
-  <!-- Work Experience -->
-    <h2>Work Experience</h2>
-  <section>
-    <div class="card-box">
-      <h3><a href="https://www.nazaninkhazra.com/k-r-l-research-lab">Research Assistant – University of Toronto</a></h3>
-        <p><em><span class="date">July 2025 – Present</span> • <span class="location">Toronto, Canada</span></em></p>
-      <ul>
-        <li>Designed and developed a website for learning microeconomics, including building interactive graphs and visualizations.</li>
-        <li>Edited and maintained website functionality using JavaScript, Python, HTML, and CSS.</li>
-        <li>Conducted literature reviews to synthesize academic sources and support ongoing research project.</li>
-        <li> Optimized data-processing pipelines, and conducted large-scale address matching and spatial geocoding in ArcGIS, improving data-merging efficiency and geographic accuracy.</li>
-      </ul>
-    </div>
-    <div class="card-box">
-      <h3>Research Assistant – Canadian Economics Association</h3>
-        <p><em><span class="date">Apr 2025 – Present</span> • <span class="location">Toronto, Canada</span></em></p>
-      <ul>
-        <li>Collected and analyzed academic data using Python and statistical methods.</li>
-        <li>Inferred demographics using ChatGPT and name-based algorithms.</li>
-        <li>Created visualizations and reports for academic publication.</li>
-      </ul>
-    </div>
-    <div class="card-box">
-      <h3>Software Engineer – Gexateq</h3>
-      <p><em><span class="date">Jul 2024 – Sept 2024</span> • <span class="location">Minsk, Belarus</span></em></p>
-
-      <ul>
-        <li>Developed backend for banking app with FastAPI, PostgreSQL, Docker, and Celery.</li>
-        <li>Wrote unit tests using Pytest and managed services with Docker Compose.</li>
-        <li>Used Git, Alembic, and DBeaver for version control and database migrations.</li>
-      </ul>
-    </div>
-  </section>
       </section>
-      <!-- Projects -->
-      <section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <ol class="timeline">
+
+          <li class="role">
+            <div class="when">Aug 2026 – Present<span>Toronto</span></div>
+            <div class="what">
+              <h3>Research Assistant, <a href="https://locvm.ca" target="_blank" rel="noopener">LOCVM</a></h3>
+              <ul>
+                <li>Scraped and analyzed 632 physician locum posts from Facebook groups and 925 job-board postings to assess market value and demand.</li>
+                <li>Calibrated the weights of the physician–job matching model (duration, location and EMR fit) based on economic impact, and designed questions to capture user preferences.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role">
+            <div class="when">May – Sep 2026<span>Toronto</span></div>
+            <div class="what">
+              <h3>Research Assistant, Securities and Investment Management Association</h3>
+              <ul>
+                <li>Designed and built a proof-of-concept Python web-scraping tool that uses AI APIs to automate data collection for the policy research team.</li>
+                <li>Presented progress to the team and proposed a plan to integrate the tool into their research workflow.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role">
+            <div class="when">Jan 2026 – Present<span>Toronto</span></div>
+            <div class="what">
+              <h3>Research Assistant, Toronto Metropolitan University</h3>
+              <ul>
+                <li>Reviewed research on Canadian TFSA/RRSP investment behaviour, producing figures, ArcGIS maps and policy recommendations.</li>
+                <li>Designed survey instruments and contributed to the experimental design for primary data on household savings decisions.</li>
+                <li>Analyzed survey responses in R and Python to identify how households allocate savings.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role">
+            <div class="when">Jul 2025 – Present<span>Toronto</span></div>
+            <div class="what">
+              <h3>Research Assistant, Canadian Economics Diversity Committee</h3>
+              <ul>
+                <li>Extracted, cleaned and analyzed large demographic datasets on faculty and graduate students across Canadian universities.</li>
+                <li>Used AI models and web scraping to fill in missing demographic data.</li>
+                <li>Co-authored the research report, translating quantitative findings into written analysis.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role">
+            <div class="when">Apr 2025 – Present<span>Toronto</span></div>
+            <div class="what">
+              <h3>Research Assistant, <a href="https://www.nazaninkhazra.com/k-r-l-research-lab" target="_blank" rel="noopener">Department of Economics, University of Toronto</a></h3>
+              <ul>
+                <li>Optimized data-processing pipelines for data merging and large-scale spatial geocoding in ArcGIS (with Dr. Farhoodi and Dr. Baum-Snow).</li>
+                <li>Built an interactive microeconomics learning website with dynamic visualizations in JavaScript, Python and HTML/CSS (with Dr. Khazra).</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role">
+            <div class="when">Jul – Sep 2024<span>Minsk</span></div>
+            <div class="what">
+              <h3>Software Engineer, Gexateq</h3>
+              <ul>
+                <li>Developed the backend for a banking app with FastAPI, PostgreSQL, SQLAlchemy, Docker and Celery; managed migrations with Alembic and testing with Pytest.</li>
+              </ul>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+
+      <section id="projects">
         <h2>Projects</h2>
+        <div class="projects">
 
-        <div class="card-box">
-          <h3>Boom vs Bust: Economic Cycles & Patent Litigation</h3>
-          <p>
-            Analyzed court case durations and economic indicators using Pandas, scikit-learn, and data scraping APIs.
-            Machine learning models such as regression trees and random forests were used to identify patterns across economic cycles.
-          </p>
-          <a href="BoomVsBust.pdf" target="_blank" class="button">View Research Paper</a>
-        </div>
+          <article class="project">
+            <h3>Boom vs Bust: economic cycles and patent litigation</h3>
+            <p>Analyzed court case durations alongside economic indicators with Pandas, scikit-learn and scraping APIs, using regression trees and random forests to find patterns across the business cycle.</p>
+            <a href="BoomVsBust.pdf" target="_blank" rel="noopener">Read the paper</a>
+          </article>
 
-        <div class="card-box">
-          <h3>Spydle – Multiplayer Word Game</h3>
-          <p>
-            Part of the team developing a multiplayer word game with a real-time gameplay system.
-          </p>
-          <a href="https://github.com/FiveTotallySpies/Spydle" target="_blank" class="button">View on GitHub</a>
-        </div>
+          <article class="project">
+            <h3>Conflict escalation prediction</h3>
+            <p>Compared XGBoost, Transformer and feed-forward neural network models for predicting conflict escalation, and recommended an approach based on accuracy and interpretability.</p>
+            <a href="present.pdf" target="_blank" rel="noopener">View the presentation</a>
+          </article>
 
-        <div class="card-box">
-          <h3>Conflict Escalation Prediction (Machine Learning)</h3>
-          <p>
-            Used XGBoost, Transformers, and FeedForward Neural Networks to predict and analyze conflict escalation scenarios.
-            Compared models' performance and recommended optimal approaches based on statistical accuracy and interpretability.
-          </p>
-          <a href="present.pdf" target="_blank" class="button">View Presentation</a>
+          <article class="project">
+            <h3>Spydle: multiplayer word game</h3>
+            <p>Worked on a team building a multiplayer word game with real-time gameplay.</p>
+            <a href="https://github.com/FiveTotallySpies/Spydle" target="_blank" rel="noopener">View on GitHub</a>
+          </article>
+
         </div>
       </section>
-  <section>
-        <h2>Hobbies</h2>
-     <div class="card-box">
-    <p>
-          I really like reading, swimming, and baking.
-      </p>
-      <a href="Desserts.pdf" target="_blank" class="button">View some desserts I made</a>
-       </div>
+
+      <section id="leadership">
+        <h2>Leadership</h2>
+        <ol class="timeline">
+
+          <li class="role">
+            <div class="when">Sep 2026 – Present<span>Toronto</span></div>
+            <div class="what">
+              <h3>Finance Captain, Relay For Life UofT</h3>
+              <p class="org-note">A large UofT student club that fundraises for the Canadian Cancer Society.</p>
+              <p class="why">I joined Relay to learn more about cancer while directly supporting people affected by it.</p>
+              <ul>
+                <li>Lead and supervise a finance committee of seven members.</li>
+                <li>Write grant applications to secure funding for the club’s events and fundraising.</li>
+                <li>Allocate the club’s budget across events and operations, balancing priorities across the team.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role">
+            <div class="when">Sep 2026 – Present<span>Toronto</span></div>
+            <div class="what">
+              <h3>Student Representative, Canadian Women Economists Committee (CWEC)</h3>
+              <ul>
+                <li>One of four economics students selected from across Canada to represent students on the committee.</li>
+                <li>Plan events as part of the event planning subcommittee.</li>
+                <li>Contribute to the newsletter subcommittee, helping share updates with the community.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="role">
+            <div class="when">Sep 2025 – Present<span>Toronto</span></div>
+            <div class="what">
+              <h3>Student Ambassador, St. Michael’s College</h3>
+              <ul>
+                <li>Welcome and orient incoming students, helping them settle into university life.</li>
+                <li>Represent St. Michael’s College at university-wide meetings.</li>
+              </ul>
+            </div>
+          </li>
+
+        </ol>
       </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <dl class="skills">
+          <dt>Data &amp; analytics</dt>
+          <dd>Excel, Power BI, Stata, Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, Jupyter, ArcGIS Pro</dd>
+          <dt>Programming</dt>
+          <dd>Python, R, SQL, Java, JavaScript, HTML/CSS</dd>
+          <dt>Databases &amp; tools</dt>
+          <dd>PostgreSQL, SQLAlchemy, Redis, Docker, Git, REST APIs</dd>
+          <dt>Languages</dt>
+          <dd>English, Russian, Belarusian, Polish, French</dd>
+        </dl>
+      </section>
+
+      <section id="hobbies" class="hobbies">
+        <h2>Outside work</h2>
+        <p>I love reading, swimming and baking. <a href="Desserts.pdf" target="_blank" rel="noopener">See some desserts I’ve made</a>.</p>
+      </section>
+
+      <footer class="footer">© 2026 Polyna German</footer>
     </main>
   </div>
 </body>
